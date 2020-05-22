@@ -27,7 +27,7 @@ df.loc[7,'number_of_bedrooms'] = np.NaN
 df.groupby('location')['number_of_bedrooms'].transform(lambda x: x.fillna(x.mean()))
 df = df.drop_duplicates()
 
-removing duplicates
+#removing duplicates
 mean = df["price"].mean()    
 df["price"] = df["price"].fillna(value=mean) 
 
