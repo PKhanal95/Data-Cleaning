@@ -37,3 +37,5 @@ df['year'] = df.date_of_sale.dt.year
 
 # Impute null prices with the mean for the location, bedrooms and year of sale
 df.groupby(['location','number_of_bedrooms','year'])['price'].transform(lambda x: x.fillna(x.mean()))
+
+
